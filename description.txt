@@ -1,0 +1,15 @@
+Call Of Duty Zombies Perks adds many of the perk-a-colas featured in the Call of Duty Zombies modes
+They are mostly faithful to their original counterparts apart from some where the features are adapted to fit terraria's gameplay mechanics
+Drinking a perk will provide its effects until the player dies
+
+Perks can be obtained by killing bosses and rare enemies
+
+The mod currently adds 5 perks being:
+.Juggernog
+.Quick Revive
+.Stamin-Up
+.Double Tap
+.Speed Cola
+
+Patches
+1.0.1 - Added a homepage

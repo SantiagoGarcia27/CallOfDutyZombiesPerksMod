@@ -1,0 +1,10 @@
+using Terraria.ModLoader;
+
+namespace CodZombiesPerks;
+
+public class WorldGen : ModWorld
+{
+	public override void PostWorldGen()
+	{
+	}
+}

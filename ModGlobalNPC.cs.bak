@@ -1,0 +1,78 @@
+using Terraria;
+using Terraria.ModLoader;
+
+namespace CodZombiesPerks;
+
+public class ModGlobalNPC : GlobalNPC
+{
+	public override void NPCLoot(NPC npc)
+	{
+		bool PerkDropEligible = false;
+		bool PerkDrop = false;
+		int numberOfDrops = 1;
+		if ((npc.type == 50) & !NPC.downedQueenBee & !NPC.downedBoss1 & !Main.hardMode & !NPC.downedBoss3)
+		{
+			PerkDropEligible = true;
+		}
+		if ((npc.type == 4) & !NPC.downedQueenBee & !NPC.downedBoss3 & !Main.hardMode)
+		{
+			PerkDropEligible = true;
+		}
+		if ((npc.type == 35) & !Main.hardMode)
+		{
+			PerkDropEligible = true;
+		}
+		if ((npc.type == 113) & !NPC.downedMechBossAny)
+		{
+			PerkDropEligible = true;
+		}
+		if ((npc.type == 134) & !NPC.downedPlantBoss)
+		{
+			PerkDropEligible = true;
+		}
+		if ((npc.type == 126) & !NPC.downedPlantBoss)
+		{
+			PerkDropEligible = true;
+		}
+		if ((npc.type == 127) & !NPC.downedPlantBoss)
+		{
+			PerkDropEligible = true;
+		}
+		if ((npc.type == 262) & !NPC.downedGolemBoss)
+		{
+			PerkDropEligible = true;
+		}
+		if ((npc.type == 245) & !NPC.downedAncientCultist)
+		{
+			PerkDropEligible = true;
+		}
+		if ((npc.type == 439) & !NPC.downedMoonlord)
+		{
+			PerkDropEligible = true;
+		}
+		if (npc.type == 398)
+		{
+			PerkDropEligible = true;
+		}
+		if (npc.boss)
+		{
+			numberOfDrops = Main.ActivePlayersCount;
+		}
+		if (npc.rarity > 0)
+		{
+			PerkDropEligible = true;
+		}
+		if (PerkDropEligible && Main.rand.Next(6) == 0)
+		{
+			PerkDrop = true;
+		}
+		if (PerkDrop)
+		{
+			for (int i = 0; i < numberOfDrops; i++)
+			{
+				string perkLoot = Utils.Next<string>(Main.rand, new string[5] { "JuggernogPerk", "StaminupPerk", "SpeedColaPerk", "DoubleTapPerk", "QuickRevivePerk" });
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ((GlobalNPC)this).get_mod().ItemType(perkLoot), 1, false, 0, false, false);
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+author = Big Nickel, Sangar
+version = 1.0.1.2
+displayName = Call Of Duty Zombies Perks
+homepage = https://forums.terraria.org/index.php?threads/call-of-duty-zombies-perks.112725/
+hideCode = false
+hideResources = false
+includePDB = true
