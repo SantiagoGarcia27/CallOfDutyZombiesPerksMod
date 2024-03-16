@@ -1,4 +1,4 @@
-﻿using CodZombiesPerks.Buffs;
+﻿using CodZombiesPerks.Content.Buffs;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;

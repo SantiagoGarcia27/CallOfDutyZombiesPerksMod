@@ -1,16 +1,16 @@
-using CodZombiesPerks.Buffs;
+using CodZombiesPerks.Content.Buffs;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CodZombiesPerks.Items.Potions;
+namespace CodZombiesPerks.Content.Items.Potions;
 
-public class StaminupPerk : ModItem
+public class DeadshotDaiquiriPerk : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		// ((ModItem)this).get_Tooltip().SetDefault("Increases Movement Speed By 33%\nLasts Until You Die\n'Sounds like it's Staaaaamin-Up time!'");
-		// ((ModItem)this).get_DisplayName().SetDefault("Stamin-Up");
+		// ((ModItem)this).get_Tooltip().SetDefault("Increases Weapon Speed By 33%\nLasts Until You Die\n'Ya Thirsty Partner?'");
+		// ((ModItem)this).get_DisplayName().SetDefault("Double Tap Root Beer");
 	}
 
 	public override void SetDefaults()
@@ -18,14 +18,14 @@ public class StaminupPerk : ModItem
 		Item.width = 18;
 		Item.height = 49;
 		Item.maxStack = 99;
-		Item.UseSound = new SoundStyle("Sounds/Item/DrinkPerk");//new SoundStyle("Sounds/Item/DrinkPerk");
+		Item.UseSound = new SoundStyle($"{nameof(CodZombiesPerks)}/Content/Sounds/Item/DrinkPerk");
 		Item.scale = 0.5f;
 		Item.value = 500;
 		Item.rare = 3;
 		Item.useAnimation = 15;
 		Item.useTime = 15;
 		Item.useStyle = 2;
-		Item.buffType = ModContent.BuffType<StaminupBuff>();
+		Item.buffType = ModContent.BuffType<DeadshotDaiquiriBuff>();
 		Item.buffTime = 999999999;
 		Item.consumable = true;
 	}

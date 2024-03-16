@@ -1,7 +1,7 @@
-using CodZombiesPerks.Items.Potions;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using CodZombiesPerks.Content.Items.Potions;
 
 namespace CodZombiesPerks;
 
@@ -12,33 +12,42 @@ public class ModGlobalNPC : GlobalNPC
 		bool PerkDropEligible = false;
 		bool PerkDrop = false;
 		int numberOfDrops = 1;
-		if ((npc.type == NPCID.KingSlime) & !NPC.downedQueenBee & !NPC.downedBoss1 & !Main.hardMode & !NPC.downedBoss3)
+		if (!Main.hardMode)
 		{
-			PerkDropEligible = true;
-		}
-		if ((npc.type == NPCID.EyeofCthulhu) & !NPC.downedQueenBee & !NPC.downedBoss3 & !Main.hardMode)
-		{
-			PerkDropEligible = true;
-		}
-		if ((npc.type == NPCID.EyeofCthulhu) & !Main.hardMode)
-		{
-			PerkDropEligible = true;
+			if (!NPC.downedQueenBee & !NPC.downedBoss3)
+			{
+				if ((npc.type == NPCID.KingSlime) && !NPC.downedBoss1)
+				{
+					PerkDropEligible = true;
+				}
+				if ((npc.type == NPCID.EyeofCthulhu))
+				{
+					PerkDropEligible = true;
+				}
+			}
+			if ((npc.type == NPCID.EyeofCthulhu))
+			{
+				PerkDropEligible = true;
+			}
 		}
 		if ((npc.type == NPCID.WallofFlesh) & !NPC.downedMechBossAny)
 		{
 			PerkDropEligible = true;
 		}
-		if ((npc.type == NPCID.TheDestroyer) & !NPC.downedPlantBoss)
+		if (!NPC.downedPlantBoss)
 		{
-			PerkDropEligible = true;
-		}
-		if ((npc.type == NPCID.Spazmatism) & !NPC.downedPlantBoss)
-		{
-			PerkDropEligible = true;
-		}
-		if ((npc.type == NPCID.SkeletronPrime) & !NPC.downedPlantBoss)
-		{
-			PerkDropEligible = true;
+			if ((npc.type == NPCID.TheDestroyer))
+			{
+				PerkDropEligible = true;
+			}
+			if ((npc.type == NPCID.Spazmatism))
+			{
+				PerkDropEligible = true;
+			}
+			if ((npc.type == NPCID.SkeletronPrime))
+			{
+				PerkDropEligible = true;
+			}
 		}
 		if ((npc.type == NPCID.Plantera) & !NPC.downedGolemBoss)
 		{
@@ -72,13 +81,14 @@ public class ModGlobalNPC : GlobalNPC
 		{
 			for (int i = 0; i < numberOfDrops; i++)
 			{
-				int perkLoot = Utils.Next<int>(Main.rand, new int[5] 
+				int perkLoot = Utils.Next(Main.rand, new int[6] 
 				{ 
 					ModContent.ItemType<JuggernogPerk>(),
 					ModContent.ItemType<StaminupPerk>(),
 					ModContent.ItemType<SpeedColaPerk>(),
                     ModContent.ItemType<DoubleTapPerk>(),
-                    ModContent.ItemType<QuickRevivePerk>()
+                    ModContent.ItemType<QuickRevivePerk>(),
+					ModContent.ItemType<DeadshotDaiquiriPerk>()
 				});
 				Item.NewItem(Item.GetSource_None(), npc.position, npc.Size, perkLoot, 1, false, 0, false, false);
 			}

@@ -1,6 +1,9 @@
+
 Call Of Duty Zombies Perks adds many of the perk-a-colas featured in the Call of Duty Zombies modes
 They are mostly faithful to their original counterparts apart from some where the features are adapted to fit terraria's gameplay mechanics
 Drinking a perk will provide its effects until the player dies
+
+This mod is port to 1.4.4 of the original work of Big Nickel, i will continue with developing of the mod on this mod.
 
 Perks can be obtained by killing bosses and rare enemies
 
@@ -10,6 +13,9 @@ The mod currently adds 5 perks being:
 .Stamin-Up
 .Double Tap
 .Speed Cola
+.Deadshot Daiquiri
 
 Patches
+1.0.3 -  Added Deadshot Daiquiri
+
 1.0.1 - Added a homepage

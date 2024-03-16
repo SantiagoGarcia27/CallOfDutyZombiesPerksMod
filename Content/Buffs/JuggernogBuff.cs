@@ -1,9 +1,9 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CodZombiesPerks.Buffs;
+namespace CodZombiesPerks.Content.Buffs;
 
-public class DeadshotDaiquiriBuff : ModBuff
+public class JuggernogBuff : ModBuff
 {
 	public override void SetStaticDefaults()
 	{

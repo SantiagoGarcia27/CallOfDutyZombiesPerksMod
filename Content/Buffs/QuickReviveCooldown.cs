@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CodZombiesPerks.Buffs;
+namespace CodZombiesPerks.Content.Buffs;
 
 public class QuickReviveCooldown : ModBuff
 {

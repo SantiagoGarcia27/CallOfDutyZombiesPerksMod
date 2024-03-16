@@ -31,14 +31,19 @@ Buffs: {
 
 	DeadshotDaiquiriBuff: {
 		DisplayName: Deadshot Daiquiri Buff
-		Description: Mods.CodZombiesPerks.Buffs.DeadshotDaiquiriBuff.Description
+		Description: Ranger projetiles are homing
 	}
 }
 
 Items: {
 	DoubleTapPerk: {
 		DisplayName: Double Tap Perk
-		Tooltip: ""
+		Tooltip:
+			'''
+			Increases Weapon Speed By 33%
+			Lasts Until You Die
+			'Ya Thirsty Partner?'
+			'''
 	}
 
 	JuggernogPerk: {
@@ -46,7 +51,8 @@ Items: {
 		Tooltip:
 			'''
 			Increases Max Health By 40%
-			Lasts Until You Die\n'Reach For Juggernog Tonight
+			Lasts Until You Die
+			'Reach For Juggernog Tonight
 			'''
 	}
 
@@ -55,7 +61,8 @@ Items: {
 		Tooltip:
 			'''
 			Revives You Apon Death And Increases Life Regen
-			Lasts Until You Die\n'If You Wanna Get Up, You Need A Little Revive!'
+			Lasts Until You Die
+			'If You Wanna Get Up, You Need A Little Revive!'
 			'''
 	}
 
@@ -81,6 +88,6 @@ Items: {
 
 	DeadshotDaiquiriPerk: {
 		DisplayName: Deadshot Daiquiri Perk
-		Tooltip: ""
+		Tooltip: The no homing projectiles gain homing ability
 	}
 }
