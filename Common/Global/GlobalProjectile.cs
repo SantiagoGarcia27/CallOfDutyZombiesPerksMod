@@ -1,4 +1,4 @@
-﻿using CodZombiesPerks.Content.Buffs;
+﻿using CodZombiesPerksPort.Content.Buffs;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -7,30 +7,31 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CodZombiesPerks.Common.Global
+namespace CodZombiesPerksPort.Common.Global
 {
     public class CodGlobalProjectile : GlobalProjectile
     {
         public static bool DeadshotDaiquiriBuff;
 
-        public List<int> HomminProjectiles = new List<int> {
+        public List<int> HomminProjectiles =
+        [
             ProjectileID.ChlorophyteBullet,
             ProjectileID.RocketSnowmanI,
             ProjectileID.RocketSnowmanII,
             ProjectileID.RocketSnowmanIII,
             ProjectileID.RocketSnowmanIV
-        };
+        ];
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {
-            DeadshotDaiquiriBuff = Main.player[projectile.owner].HasBuff<DeadshotDaiquiriBuff>() && projectile.CountsAsClass(DamageClass.Ranged) && !HomminProjectiles.Contains(projectile.type);
+            DeadshotDaiquiriBuff = Main.player[projectile.owner].HasBuff<DeadshotDaiquiriBuff>() && !HomminProjectiles.Contains(projectile.type) && !projectile.minion && !projectile.CountsAsClass(DamageClass.SummonMeleeSpeed) && projectile.friendly && !projectile.hostile;
             base.OnSpawn(projectile, source);
         }
         public override void AI(Projectile projectile)
         {
             if (DeadshotDaiquiriBuff)
             {
-                projectile.rotation = (float)Math.Atan2(projectile.velocity.Y, projectile.velocity.X) + 1.00f;
-                projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
+               // projectile.rotation = (float)Math.Atan2(projectile.velocity.Y, projectile.velocity.X) + 1.00f;
+               // projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
                 float maxDetectRadius = 400f; // The maximum radius at which a projectile can detect a target
                 float projSpeed = 5f; // The speed at which the projectile moves towards the target
 
@@ -39,10 +40,12 @@ namespace CodZombiesPerks.Common.Global
                 if (closestNPC == null)
                     return;
 
+                float length = projectile.velocity.Length();
+                float targetAngle = projectile.AngleTo(closestNPC.Center);
+                projectile.velocity = projectile.velocity.ToRotation().AngleTowards(targetAngle, MathHelper.ToRadians(3)).ToRotationVector2() * length;
+                projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(projectile.CountsAsClass(DamageClass.Ranged)? 90f: 0f);
                 // If found, change the velocity of the projectile and turn it in the direction of the target
                 // Use the SafeNormalize extension method to avoid NaNs returned by Vector2.Normalize when the vector is zero
-                projectile.velocity = 2 * ((closestNPC.Center - projectile.Center).SafeNormalize(Vector2.Zero) * projSpeed);
-                //projectile.rotation = projectile.velocity.ToRotation();
             }
             base.AI(projectile);
         }

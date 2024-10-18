@@ -1,10 +1,10 @@
-using CodZombiesPerks.Content.Buffs;
+using CodZombiesPerksPort.Content.Buffs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CodZombiesPerks;
+namespace CodZombiesPerksPort;
 
 public class SimpleModPlayer : ModPlayer
 {
@@ -31,14 +31,14 @@ public class SimpleModPlayer : ModPlayer
 			Main.NewText("You've Been Revived!", Color.Cyan);
 			return false;
 		}
-		return PreKill(damage, hitDirection, pvp, ref playSound, ref genGore, ref damageSource);
+		return base.PreKill(damage, hitDirection, pvp, ref playSound, ref genGore, ref damageSource);
 	}
 
 	public override float UseTimeMultiplier(Item item)
 	{
 		if (DoubleTap)
 		{
-			return 1.33f;
+			return 0.66f;
 		}
 		return 1f;
 	}

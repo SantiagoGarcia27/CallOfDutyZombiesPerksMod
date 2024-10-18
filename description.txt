@@ -14,8 +14,22 @@ The mod currently adds 5 perks being:
 .Double Tap
 .Speed Cola
 .Deadshot Daiquiri
+.Death perception
 
 Patches
-1.0.3 -  Added Deadshot Daiquiri
+-1.0.3 - 
+*Added Death perception
+*Added Dispenser Machine (can be selled by traveling merchant)
+*Fix Doble Tap attack speed bug
+*Buff death shoot daikiry (now work for all classes, improved tracking)
 
-1.0.1 - Added a homepage
+-1.0.2.1 - 
+*Fixed crash when player dead,
+*Fixed some localizations
+*Added Spanish suport
+
+-1.0.2 -  
+*Added Deadshot Daiquiri
+
+-1.0.1- 
+*Added a homepage

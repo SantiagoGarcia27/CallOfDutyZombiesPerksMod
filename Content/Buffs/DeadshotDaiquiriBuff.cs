@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CodZombiesPerks.Content.Buffs;
+namespace CodZombiesPerksPort.Content.Buffs;
 
 public class DeadshotDaiquiriBuff : ModBuff
 {

@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace CodZombiesPerks;
+namespace CodZombiesPerksPort;
 
 public class WorldGen : ModSystem
 {

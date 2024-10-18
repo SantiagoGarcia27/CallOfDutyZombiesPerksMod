@@ -1,0 +1,118 @@
+Mods: {
+	CodZombiesPerksPort: {
+		Buffs: {
+			DoubleTapBuff: {
+				DisplayName: Double Tap Buff
+				Description: 33% Increased Weapon Speed
+			}
+
+			JuggernogBuff: {
+				DisplayName: Juggernog Buff
+				Description: Max Health Increased By 40%
+			}
+
+			QuickReviveBuff: {
+				DisplayName: Quick Revive Buff
+				Description: Life Regen Increased, You Will Be Revived Apon Death
+			}
+
+			QuickReviveCooldown: {
+				DisplayName: Quick Revive Cooldown
+				Description: Quick Revive Cannot Be Drank
+			}
+
+			SpeedColaBuff: {
+				DisplayName: Speed Cola Buff
+				Description: 15% Increased Movement, Build, and Mining Speed
+			}
+
+			StaminupBuff: {
+				DisplayName: Staminup Buff
+				Description: 33% Increased Movement Speed
+			}
+
+			DeadshotDaiquiriBuff: {
+				DisplayName: Deadshot Daiquiri Buff
+				Description: Ranger projetiles are homing
+			}
+
+			DeathPerceptionBuff: {
+				DisplayName: Death Perception Buff
+				Description: Highlights enemies, hazardous blocks and objects like traps and increases the armor penetration by 25%
+			}
+		}
+
+		Items: {
+			DoubleTapPerk: {
+				DisplayName: Double Tap Perk
+				Tooltip:
+					'''
+					Increases Weapon Speed By 33%
+					Lasts Until You Die
+					'Ya Thirsty Partner?'
+					'''
+			}
+
+			JuggernogPerk: {
+				DisplayName: Juggernog Perk
+				Tooltip:
+					'''
+					Increases Max Health By 40%
+					Lasts Until You Die
+					'Reach For Juggernog Tonight
+					'''
+			}
+
+			QuickRevivePerk: {
+				DisplayName: Quick Revive Perk
+				Tooltip:
+					'''
+					Revives You Apon Death And Increases Life Regen
+					Lasts Until You Die
+					'If You Wanna Get Up, You Need A Little Revive!'
+					'''
+			}
+
+			SpeedColaPerk: {
+				DisplayName: Speed Cola Perk
+				Tooltip:
+					'''
+					15% Increased Movement, Build, and Mining Speed
+					Lasts Until You Die
+					'Speed Cola Speeds Up Your Life!'
+					'''
+			}
+
+			StaminupPerk: {
+				DisplayName: Staminup Perk
+				Tooltip:
+					'''
+					Increases Movement Speed By 33%
+					Lasts Until You Die
+					'Sounds like it's Staaaaamin-Up time!'
+					'''
+			}
+
+			DeadshotDaiquiriPerk: {
+				DisplayName: Deadshot Daiquiri Perk
+				Tooltip: The no homing projectiles gain homing ability
+			}
+
+			DispenserMachine: {
+				DisplayName: Dispenser Machine
+				Tooltip: You can spend {0} gold coins to get a random perk
+			}
+
+			DeathPerceptionPerk: {
+				DisplayName: Death Perception Perk
+				Tooltip:
+					'''
+					Highlights enemies, hazardous blocks and objects like traps 
+					Increases the armor penetration by 25%
+					Lasts Until You Die
+					'Obscured enemies are keylined'
+					'''
+			}
+		}
+	}
+}

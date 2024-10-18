@@ -1,0 +1,111 @@
+Mods: {
+	CodZombiesPerksPort: {
+		Buffs: {
+			DoubleTapBuff: {
+				DisplayName: Doble Tiro
+				Description: Aumenta la velocidad de disparo en 33%
+			}
+
+			JuggernogBuff: {
+				DisplayName: Titan
+				Description: Aumenta la vida máxima en 40%
+			}
+
+			QuickReviveBuff: {
+				DisplayName: Reanimación rápida
+				Description: Aumenta la regeneración de vida y te permite revivir despues de la muerte.
+			}
+
+			QuickReviveCooldown: {
+				DisplayName: Reanimación rápida Cooldown
+				Description: Reanimación rápida no puede ser tomada
+			}
+
+			SpeedColaBuff: {
+				DisplayName: Soda Rápida
+				Description: Aumenta la velocidad de movimiento,contrucción y mineria en un 15%
+			}
+
+			StaminupBuff: {
+				DisplayName: Resistencia+
+				Description: Aumenta la velocidad de movimiento en 33%
+			}
+
+			DeadshotDaiquiriBuff: {
+				DisplayName: Daiquiri Letal
+				Description: Los proyectiles de rango ahora son teledirigidos
+			}
+
+			DeathPerceptionBuff: {
+				DisplayName: Percepión letal
+				Description: Permite ver los peligros y aumenta la perforación de armadura un 25%
+			}
+		}
+
+		Items: {
+			DoubleTapPerk: {
+				DisplayName: Doble Tiro
+				Tooltip:
+					'''
+					Aumenta la velocidad de disparo en 33%
+					Dura hasta que mueres
+					'''
+			}
+
+			JuggernogPerk: {
+				DisplayName: Titan
+				Tooltip:
+					'''
+					Aumenta la vida máxima en 40%
+					Dura hasta que mueres
+					'''
+			}
+
+			QuickRevivePerk: {
+				DisplayName: Reanimación rápida
+				Tooltip:
+					'''
+					Te reanima cuando mueres e incrementa la regeneración de vida.
+					Dura hasta que mueres
+					'''
+			}
+
+			SpeedColaPerk: {
+				DisplayName: Soda Rápida
+				Tooltip:
+					'''
+					Aumenta la velocidad de movimiento,contrucción y mineria en un 15%
+					Dura hasta que mueres
+					'''
+			}
+
+			StaminupPerk: {
+				DisplayName: Resistencia+
+				Tooltip:
+					'''
+					Aumenta la velocidad de movimiento en 33%
+					Dura hasta que mueres
+					'''
+			}
+
+			DeadshotDaiquiriPerk: {
+				DisplayName: Daiquiri Letal
+				Tooltip: Los proyectiles de rango ahora son teledirigidos
+			}
+
+			DispenserMachine: {
+				DisplayName: Maquina dispensadora
+				Tooltip: Puedes gastar {0} de oro para obtener un perk aleatorio
+			}
+
+			DeathPerceptionPerk: {
+				DisplayName: Percepión letal
+				Tooltip:
+					'''
+					Permite ver los peligros  
+					Aumenta la perforación de armadura un 25%
+					'''
+			}
+		}
+	}
+}

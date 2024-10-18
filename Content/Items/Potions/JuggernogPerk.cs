@@ -1,9 +1,9 @@
-using CodZombiesPerks.Content.Buffs;
+using CodZombiesPerksPort.Content.Buffs;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CodZombiesPerks.Content.Items.Potions;
+namespace CodZombiesPerksPort.Content.Items.Potions;
 
 public class JuggernogPerk : ModItem
 {
@@ -18,7 +18,7 @@ public class JuggernogPerk : ModItem
 		Item.width = 18;
 		Item.height = 49;
 		Item.maxStack = 99;
-		 Item.UseSound = new SoundStyle($"{nameof(CodZombiesPerks)}/Content/Sounds/Item/DrinkPerk");
+		 Item.UseSound = new SoundStyle($"{nameof(CodZombiesPerksPort)}/Content/Sounds/Item/DrinkPerk");
 		Item.scale = 0.5f;
 		Item.value = 500;
 		Item.rare = 3;

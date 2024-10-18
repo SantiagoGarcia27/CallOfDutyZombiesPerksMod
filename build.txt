@@ -1,5 +1,5 @@
 author = Sangar
-version = 1.0.1.3
+version = 1.0.3
 displayName = [i:1304][c/bfbfbf:Call Of][c/b36d12: Duty] [c/474747:Zombies Perks][i:1304]
 homepage = https://forums.terraria.org/index.php?threads/call-of-duty-zombies-perks.112725/
 hideCode = false

@@ -1,9 +1,11 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using CodZombiesPerks.Content.Items.Potions;
+using CodZombiesPerksPort.Content.Items.Potions;
+using CodZombiesPerksPort.Content.Items.Placeable;
+using CodZombiesPerksPort.Common.Utils;
 
-namespace CodZombiesPerks;
+namespace CodZombiesPerksPort;
 
 public class ModGlobalNPC : GlobalNPC
 {
@@ -81,17 +83,16 @@ public class ModGlobalNPC : GlobalNPC
 		{
 			for (int i = 0; i < numberOfDrops; i++)
 			{
-				int perkLoot = Utils.Next(Main.rand, new int[6] 
-				{ 
-					ModContent.ItemType<JuggernogPerk>(),
-					ModContent.ItemType<StaminupPerk>(),
-					ModContent.ItemType<SpeedColaPerk>(),
-                    ModContent.ItemType<DoubleTapPerk>(),
-                    ModContent.ItemType<QuickRevivePerk>(),
-					ModContent.ItemType<DeadshotDaiquiriPerk>()
-				});
-				Item.NewItem(Item.GetSource_None(), npc.position, npc.Size, perkLoot, 1, false, 0, false, false);
+				Item.NewItem(Item.GetSource_None(), npc.position, npc.Size, GlobalUtils.Perks[Main.rand.Next(GlobalUtils.Perks.Length)], 1, false, 0, false, false);
 			}
 		}
 	}
+    public override void SetupTravelShop(int[] shop, ref int nextSlot)
+    {
+        if (Main.rand.NextBool(3))
+        {
+            shop[nextSlot] = ModContent.ItemType<DispenserMachine>();
+            nextSlot++;
+        }
+    }
 }

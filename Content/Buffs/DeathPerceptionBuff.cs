@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace CodZombiesPerksPort.Content.Buffs;
 
-public class StaminupBuff : ModBuff
+public class DeathPerceptionBuff : ModBuff
 {
 	public override void SetStaticDefaults()
 	{
@@ -15,6 +15,8 @@ public class StaminupBuff : ModBuff
 
 	public override void Update(Player player, ref int buffIndex)
 	{
-		player.moveSpeed *= 1.33f;
-	}
+		player.dangerSense = true;
+        player.detectCreature = true;
+        player.GetArmorPenetration(DamageClass.Generic) *= 1.25f;
+    }
 }
